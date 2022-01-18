@@ -26,15 +26,15 @@ function Header() {
             <div className={styles.menuButton} onClick={() => setOpen(!open)}>
               <HiMenuAlt3 />
             </div>
-            <div className="links">
-              {open == true && (
-                <ul>
-                  <li onClick={() => setCount(1)}>Home</li>
-                  <li onClick={() => setCount(2)}>Cart</li>
-                  <li onClick={() => setCount(3)}>About</li>
-                </ul>
-              )}
-            </div>
+          <div className={styles.links}>
+            {open == true && (
+              <ul>
+                <li onClick={() => setCount(1)}>Home</li>
+                <li onClick={() => setCount(2)}>Cart</li>
+                <li onClick={() => setCount(3)}>About</li>
+              </ul>
+            )}
+          </div>
           </div>
         </div>
       </div>
