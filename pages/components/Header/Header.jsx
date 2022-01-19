@@ -51,7 +51,7 @@ function Header() {
       </div>
       <div className={styles.body}>
         {count === 1 && <Home />}
-        {count === 2 && <Cart />}
+        {count === 2 && <Link href="/Cart"><Cart /></Link> }
         {count === 3 && <About />}
       </div>
     </>
