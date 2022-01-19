@@ -7,4 +7,6 @@
 .button {
     padding: 10px 25px;
     margin: auto;
+    background-repeat: n;
+    background-image: ./;
 }
