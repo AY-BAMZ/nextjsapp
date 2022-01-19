@@ -36,7 +36,7 @@ function Header() {
                   Home 
                   </Link></li>
                 <li onClick={() => setCount(2)}><div onClick={() => router.push('/Cart')}>
-                  <Cart /> 
+                  Cart
                   </div></li>
                 <li onClick={() => setCount(3)}>
                 <Link href="/about">
