@@ -6,10 +6,12 @@ import styles from "../../../styles/components/Header/Header.module.css";
 import { FiSearch } from "react-icons/fi";
 import { HiMenuAlt3 } from "react-icons/hi";
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 function Header() {
   const [open, setOpen] = useState(false);
   const [count, setCount] = useState(1);
+  const router = useRouter()
   return (
     <>
       <div className={styles.header}>
@@ -33,9 +35,9 @@ function Header() {
                 <li onClick={() => setCount(1)}><Link href="/">
                   Home 
                   </Link></li>
-                <li onClick={() => setCount(2)}><Link href="/cart">
-                  Cart 
-                  </Link></li>
+                <li onClick={() => setCount(2)}><div onClick={() => router.push('/Cart')}>
+                  <Cart /> 
+                  </div></li>
                 <li onClick={() => setCount(3)}>
                 <Link href="/about">
                   About 
