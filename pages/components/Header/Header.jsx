@@ -35,11 +35,11 @@ function Header() {
                 <li onClick={() => setCount(1)}><Link href='/' >
                   Home 
                   </Link></li>
-                <li onClick={() => setCount(2)}><Link href='components/Cart/Cart'>
+                <li onClick={() => setCount(2)}><Link href='/components/Cart/RenderCart'>
                   Cart
                   </Link></li>
                 <li onClick={() => setCount(3)}>
-                <Link href='components/About/About'>
+                <Link href='/components/About/RenderAbout'>
                   About 
                   </Link>
                   </li>
@@ -49,11 +49,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className={styles.body}>
-        {count === 1 && <Home />}
-        {count === 2 && <Cart /> }
-        {count === 3 && <About />}
-      </div>
+      
     </>
   );
 }

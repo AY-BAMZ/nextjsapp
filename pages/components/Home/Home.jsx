@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Post from "./Post";
 import styles from "../../../styles/components/Home/Home.module.css"
+import { usePostContext } from "../UsePost/PostContext";
 
 function Home() {
-  const [posts, setPosts] = useState([]);
+  const { posts, setPosts } = usePostContext();
   const [currentPage, setCurrentPage] = useState(1)
   const [postPerPage, setPostPerPage] = useState(4)
 
 
-  useEffect(() => {
-    const url = "https://jsonplaceholder.typicode.com/photos";
-    fetch(url)
-      .then((resp) => resp.json())
-      .then((resp) => setPosts(resp));
-  }, []);
+  
 
   const indexOfLastPost = currentPage * postPerPage;
   const indexOfFirstPost = indexOfLastPost - postPerPage;
@@ -21,6 +17,7 @@ function Home() {
 
   return (
     <div>
+      
       <div className={styles.posts}>
         {currentPosts.map((post) => (
           <Post title={post.title} thumbnailUrl={post.thumbnailUrl} key={post.id} />
