@@ -1,8 +1,8 @@
 import { useState } from "react";
+import { usePostContext } from "../UsePost/PostContext";
 
 export default function MainPost(props) {
     const {title, thumbnailUrl, id} = props;
-    const {posts} = useState()
     return (
     <div>
         <img src={title} alt="" />
