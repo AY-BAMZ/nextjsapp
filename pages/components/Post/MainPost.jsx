@@ -5,8 +5,8 @@ export default function MainPost(props) {
     const {title, thumbnailUrl, id} = props;
     return (
     <div>
-        <img src={title} alt="" />
-        <h1>{thumbnailUrl}</h1>
+        <img src={thumbnailUrl} alt="" />
+        <h1>{title}</h1>
     </div>
     )
 }

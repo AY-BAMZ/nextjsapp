@@ -3,19 +3,20 @@ import Header from "../Header/Header";
 import MainPost from "./MainPost";
 import { usePostContext, PostProvider } from "../UsePost/PostContext";
 import {useState} from "../Home/Home"
+import { useRouter } from "next/router";
+
+
 
 export default function LandingPost() {
     const {posts, setPosts} = usePostContext()
-    const getPost = (id) => {
-        const filtered = posts.filter(post => post.id === parseInt(id));
+    const router = useRouter()
+    const getPost = () => {
+        const filtered = posts.filter(post => post.id === parseInt(router.query.LandingPost));
         return filtered[0];
     }
     return (
     <div>
-        <PostProvider>
-
         <Header />
-        <MainPost {...getPost(id)} />
-        </PostProvider>
+        <MainPost  {...getPost()}/>
     </div>)
 }

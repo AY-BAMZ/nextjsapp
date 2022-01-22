@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import Home from "../Home/Home";
-import Cart from "../Cart/Cart";
-import About from "../About/[About]";
 import styles from "../../../styles/components/Header/Header.module.css";
 import { FiSearch } from "react-icons/fi";
 import { HiMenuAlt3 } from "react-icons/hi";
@@ -11,6 +8,7 @@ import Link from "next/link";
 function Header() {
   const [open, setOpen] = useState(false);
   const [count, setCount] = useState(1);
+  const [search, setSearch] = useState("")
   const router = useRouter()
   return (
     <>
@@ -32,13 +30,13 @@ function Header() {
           <div className={styles.links}>
             {open == true && (
               <ul>
-                <li onClick={() => setCount(1)}><Link href='/' >
+                <li ><Link href='/' >
                   Home 
                   </Link></li>
-                <li onClick={() => setCount(2)}><Link href='/components/Cart/RenderCart'>
+                <li ><Link href='/components/Cart/RenderCart'>
                   Cart
                   </Link></li>
-                <li onClick={() => setCount(3)}>
+                <li >
                 <Link href='/components/About/RenderAbout'>
                   About 
                   </Link>

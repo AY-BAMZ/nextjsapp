@@ -10,6 +10,8 @@ function Home() {
   const { posts, setPosts } = usePostContext();
   const [currentPage, setCurrentPage] = useState(1)
   const [postPerPage, setPostPerPage] = useState(4)
+  
+  
 
 
   

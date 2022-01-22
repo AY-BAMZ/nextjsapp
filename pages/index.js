@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Header from "./components/Header/Header";
 import RenderHome from "./components/Home/RenderHome";
-import PostProvider from "./components/UsePost/PostContext";
+// import PostProvider from "./components/UsePost/PostContext";
 
 export default function Home() {
   return (
@@ -14,9 +14,9 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main className={styles.main}>
-      <PostProvider>
+      
           <RenderHome />
-      </PostProvider>
+      
         </main>
         <footer className={styles.footer}> </footer>
     </div>
