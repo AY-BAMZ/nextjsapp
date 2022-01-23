@@ -2,10 +2,10 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Header from "./components/Header/Header";
-import RenderHome from "./components/Home/RenderHome";
+import Home from "./components/Home/Home";
 // import PostProvider from "./components/UsePost/PostContext";
 
-export default function Home() {
+export default function Homes() {
   return (
     <div className={styles.container}>
         <Head>
@@ -15,7 +15,7 @@ export default function Home() {
         </Head>
         <main className={styles.main}>
       
-          <RenderHome />
+          <Home />
       
         </main>
         <footer className={styles.footer}> </footer>
